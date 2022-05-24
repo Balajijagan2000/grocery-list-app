@@ -1,38 +1,124 @@
 .App {
-  text-align: center;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.line-through {
+    text-decoration: line-through;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.underline {
+    text-decoration: normal;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header {
+    background-color: palegreen;
+    height: 50px;
+    padding: 10px;
+    position: sticky;
+    width: 100%;
+    top:0;
+    left:0;
+    text-align: center;
+    font-size: 18px;
+    color: darkgreen;
 }
+footer {
 
-.App-link {
-  color: #61dafb;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    background-color: palegreen;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    color: darkgreen;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    justify-content: center;
+    width: 70%;
+    background-color: #B4E197;
+}
+form {
+    width: 50%;
+    text-align: center;
+    
+}
+input[type="text"] {
+    width: 100%;
+    height: 33px;
+    outline: none;
+    border: 2px solid green;
+    border-radius:3px ;
+    font-size: 14px;
+    font-weight: bold;
+}
+label {
+    font-weight: 600;
+}
+button[type="submit"] {
+    height: 35px;
+    padding: 5px;
+    width: 50%;
+    margin: 8px 0;
+    background-color: #4E944F;
+    border-radius: 3px;
+    border:none;
+    outline: none;
+    color:#B4E197;
+    font-size: 16px;
+}
+#add {
+    width: 100%;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100% !important;
+    align-items: center;
+    background-color: #B4E197;
+    padding: 5px;
+}
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+.grocery {
+    font-size: 1.3em;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 8px;
+    margin: 5px;
+    width: 50%;
+    color: #B4E197;
+    background-color: #4E944F;
+}
+.trash:hover {
+    color: darkgreen;
+}
+button[type="submit"]:hover {
+    
+    background-color:green;
+}
+.loader {
+    color:darkgreen;
+    width: 50px;
+    height: 50px;
+    animation-name: loading;
+    animation-timing-function: ease;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;    
+}
+@keyframes loading {
+    to {
+        transform: rotate(360deg);
+    }
 }
